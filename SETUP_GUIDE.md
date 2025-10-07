@@ -1,4 +1,4 @@
-# 🚀 DeepTrade-RL Setup and Execution Guide
+# DeepTrade-RL Setup and Execution Guide
 
 ## Quick Start for SE4050 Team Members
 
@@ -6,15 +6,15 @@ This guide will help you run the DeepTrade-RL project notebooks on Google Colab.
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 
-1. ✅ Google account (for Google Colab and Drive)
-2. ✅ GitHub account (to clone repository)
-3. ✅ Basic knowledge of Python and Jupyter notebooks
+1. Google account (for Google Colab and Drive)
+2. GitHub account (to clone repository)
+3. Basic knowledge of Python and Jupyter notebooks
 
 ---
 
-## 🎯 Step-by-Step Setup
+## Step-by-Step Setup
 
 ### Step 1: Clone Repository to Google Drive
 
@@ -56,9 +56,9 @@ MyDrive/
 
 ---
 
-## 📓 Running the Notebooks
+## Running the Notebooks
 
-### Notebook 1: Data Collection (⏱️ ~10 minutes)
+### Notebook 1: Data Collection (~10 minutes)
 
 **Purpose:** Fetch historical Bitcoin price data from Binance API
 
@@ -81,7 +81,7 @@ MyDrive/
 
 ---
 
-### Notebook 2: Trading Environment (⏱️ ~5 minutes)
+### Notebook 2: Trading Environment (~5 minutes)
 
 **Purpose:** Test the custom trading environment with random actions
 
@@ -106,7 +106,7 @@ MyDrive/
 
 ---
 
-### Notebook 3: Train DDQN Agent (⏱️ ~30-45 minutes)
+### Notebook 3: Train DDQN Agent (~30-45 minutes)
 
 **Purpose:** Train Double Deep Q-Network agent
 
@@ -139,7 +139,7 @@ MyDrive/
 
 ---
 
-### Notebook 4: Train PPO Agent (⏱️ ~20-30 minutes)
+### Notebook 4: Train PPO Agent (~20-30 minutes)
 
 **Purpose:** Train Proximal Policy Optimization agent
 
@@ -163,7 +163,7 @@ MyDrive/
 
 ---
 
-### Notebook 5: Evaluation and Visualization (⏱️ ~10 minutes)
+### Notebook 5: Evaluation and Visualization (~10 minutes)
 
 **Purpose:** Compare DDQN, PPO, and baseline strategies
 
@@ -189,7 +189,7 @@ MyDrive/
 
 ---
 
-## 🎓 For Viva Presentation
+## For Viva Presentation
 
 ### Division of Notebooks (Suggested)
 
@@ -246,7 +246,7 @@ MyDrive/
 
 ---
 
-## 🐛 Common Issues and Solutions
+## Common Issues and Solutions
 
 ### Issue 1: "Module not found" Error
 **Solution:**
@@ -282,7 +282,7 @@ os.makedirs('/content/drive/MyDrive/deeptrade-rl/models', exist_ok=True)
 
 ---
 
-## 📊 Expected Runtime
+## Expected Runtime
 
 | Task | CPU Time | GPU Time |
 |------|----------|----------|
@@ -297,7 +297,7 @@ os.makedirs('/content/drive/MyDrive/deeptrade-rl/models', exist_ok=True)
 
 ---
 
-## ✅ Pre-Viva Checklist
+## Pre-Viva Checklist
 
 - [ ] All 5 notebooks run successfully
 - [ ] Data file exists and is valid
@@ -313,7 +313,7 @@ os.makedirs('/content/drive/MyDrive/deeptrade-rl/models', exist_ok=True)
 
 ---
 
-## 🎯 Viva Questions to Prepare
+## Viva Questions to Prepare
 
 ### Technical Questions
 
@@ -376,7 +376,7 @@ os.makedirs('/content/drive/MyDrive/deeptrade-rl/models', exist_ok=True)
 
 ---
 
-## 📚 Additional Resources
+## Additional Resources
 
 ### Understanding RL
 - Sutton & Barto: "Reinforcement Learning: An Introduction" (Chapter 6: TD Learning)
@@ -396,18 +396,18 @@ os.makedirs('/content/drive/MyDrive/deeptrade-rl/models', exist_ok=True)
 
 ---
 
-## 🎉 Final Notes
+## Final Notes
 
 **For SE4050 Team:**
 
 You've built a complete, working reinforcement learning system! Here's what you accomplished:
 
-✅ Collected and preprocessed real Bitcoin data  
-✅ Designed a custom RL environment  
-✅ Implemented two state-of-the-art RL algorithms  
-✅ Trained agents that outperform baselines  
-✅ Evaluated critically with proper metrics  
-✅ Documented everything professionally  
+Collected and preprocessed real Bitcoin data  
+Designed a custom RL environment  
+Implemented two state-of-the-art RL algorithms  
+Trained agents that outperform baselines  
+Evaluated critically with proper metrics  
+Documented everything professionally  
 
 **This is graduate-level work.** Be proud of what you've built!
 
@@ -428,11 +428,11 @@ You've built a complete, working reinforcement learning system! Here's what you 
 
 ---
 
-**Good luck with your Viva! 🎓🚀**
+**Good luck with your Viva!**
 
 ---
 
-## 📧 Contact
+## Contact
 
 For questions about this project:
 - GitHub Issues: https://github.com/dasunhq/bitcoin-rl-trade-agent/issues

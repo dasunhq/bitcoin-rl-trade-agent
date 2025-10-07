@@ -14,7 +14,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -28,7 +28,7 @@
 
 ---
 
-## 🎯 Overview
+## Overview
 
 DeepTrade-RL is an advanced reinforcement learning system that trains autonomous trading agents to make profitable Bitcoin trading decisions. The project implements two state-of-the-art RL algorithms:
 
@@ -37,15 +37,15 @@ DeepTrade-RL is an advanced reinforcement learning system that trains autonomous
 
 ### Key Objectives
 
-1. ✅ Develop custom OpenAI Gym trading environment
-2. ✅ Implement DDQN and PPO agents from scratch
-3. ✅ Train agents on historical Bitcoin price data
-4. ✅ Evaluate performance against baseline strategies
-5. ✅ Deploy for paper trading with Binance Testnet
+1. Develop custom OpenAI Gym trading environment
+2. Implement DDQN and PPO agents from scratch
+3. Train agents on historical Bitcoin price data
+4. Evaluate performance against baseline strategies
+5. Deploy for paper trading with Binance Testnet
 
 ---
 
-## ✨ Features
+## Features
 
 ### Environment
 - **Custom Gym Environment:** Realistic trading simulation with transaction costs
@@ -66,7 +66,7 @@ DeepTrade-RL is an advanced reinforcement learning system that trains autonomous
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 deeptrade-rl/
@@ -96,7 +96,7 @@ deeptrade-rl/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Google Colab (Recommended)
 
@@ -114,7 +114,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📊 Results
+## Results
 
 | Strategy | Total Return | Sharpe Ratio | Max Drawdown |
 |----------|-------------|--------------|--------------|
@@ -122,23 +122,23 @@ pip install -r requirements.txt
 | **DDQN** | +5.0% | 1.2 | -5.0% |
 | Buy-and-Hold | +3.0% | 0.8 | -8.0% |
 
-✅ Both RL agents outperform baseline strategies  
-✅ Lower drawdowns and better risk-adjusted returns  
-✅ Suitable for paper trading deployment
+Both RL agents outperform baseline strategies  
+Lower drawdowns and better risk-adjusted returns  
+Suitable for paper trading deployment
 
 ---
 
-## 🎓 SE4050 Rubric Alignment
+## SE4050 Rubric Alignment
 
-✅ **Problem Selection:** Appropriate RL trading problem  
-✅ **Input/Reward:** Well-defined state/action/reward  
-✅ **Algorithm Background:** DDQN and PPO explained  
-✅ **Implementation:** Clean, modular, reproducible code  
-✅ **Results:** Comprehensive evaluation and analysis  
+**Problem Selection:** Appropriate RL trading problem  
+**Input/Reward:** Well-defined state/action/reward  
+**Algorithm Background:** DDQN and PPO explained  
+**Implementation:** Clean, modular, reproducible code  
+**Results:** Comprehensive evaluation and analysis  
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 **FOR EDUCATIONAL PURPOSES ONLY.** Do not use for live trading without proper risk management and professional advice.
 
@@ -146,8 +146,8 @@ pip install -r requirements.txt
 
 <div align="center">
 
-**Built with ❤️ for SE4050 Deep Learning**
+**Built with ♥ for SE4050 Deep Learning**
 
-⭐ Star this repo if you found it helpful!
+Star this repo if you found it helpful!
 
 </div>

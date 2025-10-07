@@ -13,10 +13,10 @@
 This project implements an autonomous Bitcoin trading system using two state-of-the-art reinforcement learning algorithms: Double Deep Q-Network (DDQN) and Proximal Policy Optimization (PPO). Both agents learn to make profitable trading decisions by interacting with a custom-built trading environment that simulates realistic market conditions.
 
 **Key Results:**
-- ✅ PPO agent achieved **8.0% return** vs 3.0% buy-and-hold baseline
-- ✅ DDQN agent achieved **5.0% return** with better risk management
-- ✅ Both agents demonstrate lower drawdowns and higher Sharpe ratios
-- ✅ Suitable for deployment in paper trading environments
+- PPO agent achieved **8.0% return** vs 3.0% buy-and-hold baseline
+- DDQN agent achieved **5.0% return** with better risk management
+- Both agents demonstrate lower drawdowns and higher Sharpe ratios
+- Suitable for deployment in paper trading environments
 
 ---
 
@@ -109,10 +109,10 @@ reward = (portfolio_after - portfolio_before) / initial_balance
 
 **Reward Shaping:**
 The combined reward function encourages:
-- ✅ Profit maximization
-- ✅ Risk minimization
-- ✅ Cost-efficient trading
-- ✅ Alignment with market momentum
+- Profit maximization
+- Risk minimization
+- Cost-efficient trading
+- Alignment with market momentum
 
 ---
 
@@ -165,10 +165,10 @@ DDQN builds upon Q-learning, a fundamental RL algorithm that learns the action-v
 ```
 
 **Justification for Trading:**
-- ✅ Proven on Atari games (similar high-dim input)
-- ✅ Off-policy learning (efficient data use)
-- ✅ Stable convergence with experience replay
-- ✅ Handles noisy financial data well
+- Proven on Atari games (similar high-dim input)
+- Off-policy learning (efficient data use)
+- Stable convergence with experience replay
+- Handles noisy financial data well
 
 ### 3.2 Proximal Policy Optimization (PPO)
 
@@ -216,10 +216,10 @@ PPO is a policy gradient method that directly optimizes the policy π(a|s) rathe
 ```
 
 **Justification for Trading:**
-- ✅ State-of-the-art for continuous control
-- ✅ Better sample efficiency than DQN
-- ✅ More stable than TRPO
-- ✅ Successfully used in robotics (similar continuous optimization)
+- State-of-the-art for continuous control
+- Better sample efficiency than DQN
+- More stable than TRPO
+- Successfully used in robotics (similar continuous optimization)
 
 ### 3.3 Algorithm Comparison
 
@@ -286,12 +286,12 @@ Input (58) → Dense(256) → ReLU → Dropout(0.2)
 ### 4.4 Code Quality
 
 **Best Practices:**
-- ✅ Type hints throughout
-- ✅ Comprehensive docstrings
-- ✅ Modular design
-- ✅ Error handling
-- ✅ Logging and monitoring
-- ✅ Reproducible (fixed seeds)
+- Type hints throughout
+- Comprehensive docstrings
+- Modular design
+- Error handling
+- Logging and monitoring
+- Reproducible (fixed seeds)
 
 ---
 
@@ -311,11 +311,11 @@ Input (58) → Dense(256) → ReLU → Dropout(0.2)
 | **Win Rate** | 58% | 54% | N/A | 48% |
 
 **Key Observations:**
-1. ✅ Both RL agents outperform baselines
-2. ✅ PPO achieves best returns and Sharpe ratio
-3. ✅ DDQN shows slightly higher trading frequency
-4. ✅ Both agents avoid overtrading (vs random)
-5. ✅ Lower drawdowns than buy-and-hold
+1. Both RL agents outperform baselines
+2. PPO achieves best returns and Sharpe ratio
+3. DDQN shows slightly higher trading frequency
+4. Both agents avoid overtrading (vs random)
+5. Lower drawdowns than buy-and-hold
 
 ### 5.2 Training Curves
 
@@ -397,18 +397,18 @@ Input (58) → Dense(256) → ReLU → Dropout(0.2)
 This project successfully demonstrates the application of deep reinforcement learning to cryptocurrency trading. Both DDQN and PPO agents learned effective trading policies that outperform baseline strategies in terms of returns, risk-adjusted performance, and drawdown control.
 
 **Key Achievements:**
-- ✅ Implemented two state-of-the-art RL algorithms from scratch
-- ✅ Designed realistic trading environment with proper reward shaping
-- ✅ Achieved measurable outperformance over baselines
-- ✅ Produced production-ready code for paper trading
-- ✅ Comprehensive documentation and reproducible results
+- Implemented two state-of-the-art RL algorithms from scratch
+- Designed realistic trading environment with proper reward shaping
+- Achieved measurable outperformance over baselines
+- Produced production-ready code for paper trading
+- Comprehensive documentation and reproducible results
 
 **SE4050 Rubric Alignment:**
-- ✅ **Problem Selection:** Appropriate and challenging RL problem
-- ✅ **Input/Reward:** Well-justified state/action/reward design
-- ✅ **Algorithm Background:** Thorough explanation of DDQN and PPO
-- ✅ **Implementation:** Clean, modular, well-documented code
-- ✅ **Results:** Comprehensive evaluation with critical analysis
+- **Problem Selection:** Appropriate and challenging RL problem
+- **Input/Reward:** Well-justified state/action/reward design
+- **Algorithm Background:** Thorough explanation of DDQN and PPO
+- **Implementation:** Clean, modular, well-documented code
+- **Results:** Comprehensive evaluation with critical analysis
 
 **Future Work:**
 While current results are promising for paper trading, real-world deployment would require extensive additional testing, risk management systems, and continuous monitoring. This project provides a solid foundation for future research in AI-driven trading systems.
