@@ -1,11 +1,46 @@
-torch
-gymnasium
-numpy
-pandas
-matplotlib
-stable-baselines3
-ccxt
-python-binance
-ta
-pyyaml
-plotly
+# DeepTrade-RL: Bitcoin Trading with Reinforcement Learning
+# SE4050 Deep Learning Project Dependencies
+
+# Core Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Reinforcement Learning
+gym>=0.26.0
+stable-baselines3>=2.0.0
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.14.0
+
+# API Clients
+requests>=2.31.0
+python-binance>=1.0.17
+ccxt>=4.0.0
+
+# Technical Indicators
+ta>=0.10.0
+TA-Lib>=0.4.26  # Optional: requires separate installation
+
+# Configuration
+pyyaml>=6.0
+
+# Utilities
+tqdm>=4.65.0
+jupyter>=1.0.0
+
+# Testing (optional)
+pytest>=7.3.0
+pytest-cov>=4.1.0
+
+# Logging
+tensorboard>=2.13.0
+
+# Google Colab Integration
+google-colab>=1.0.0  # Only needed in Colab environment
+

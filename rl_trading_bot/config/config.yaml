@@ -1,0 +1,200 @@
+# DeepTrade-RL Configuration File
+# Project: SE4050 Deep Learning - Bitcoin Trading with RL
+
+# API Configuration
+api:
+  provider: "binance"  # Options: binance, coinbase
+  
+  binance:
+    testnet: true
+    api_key: "YOUR_BINANCE_TESTNET_API_KEY"
+    api_secret: "YOUR_BINANCE_TESTNET_SECRET"
+    base_url: "https://testnet.binance.vision/api"
+  
+  coinbase:
+    sandbox: true
+    api_key: "YOUR_COINBASE_SANDBOX_KEY"
+    api_secret: "YOUR_COINBASE_SANDBOX_SECRET"
+    passphrase: "YOUR_COINBASE_PASSPHRASE"
+    base_url: "https://api-public.sandbox.pro.coinbase.com"
+
+# Data Collection
+data:
+  symbol: "BTCUSDT"
+  interval: "1h"  # Options: 1m, 5m, 15m, 1h, 4h, 1d
+  history_days: 180
+  train_test_split: 0.8
+  cache_dir: "./data"
+
+# Trading Environment
+environment:
+  initial_balance: 10000.0
+  transaction_fee: 0.001  # 0.1%
+  lookback_window: 50
+  max_steps: null  # Auto-calculated from data length
+  normalize_state: true
+
+# Technical Indicators
+indicators:
+  rsi_period: 14
+  ema_periods: [12, 26, 50]
+  sma_periods: [20, 50]
+  macd:
+    fast: 12
+    slow: 26
+    signal: 9
+  bollinger_bands:
+    period: 20
+    std_multiplier: 2.0
+
+# DDQN Agent Configuration
+ddqn:
+  state_dim: 58  # 3 portfolio + 5 indicators + 50 history
+  action_dim: 3  # HOLD, BUY, SELL
+  
+  # Network architecture
+  hidden_dims: [256, 128, 64]
+  dropout: 0.2
+  
+  # Training hyperparameters
+  learning_rate: 0.001
+  gamma: 0.99  # Discount factor
+  epsilon_start: 1.0
+  epsilon_end: 0.01
+  epsilon_decay: 0.995
+  
+  # Experience replay
+  buffer_capacity: 10000
+  batch_size: 64
+  
+  # Target network
+  target_update_freq: 100
+  
+  # Training
+  episodes: 100
+  max_steps_per_episode: null  # Auto from env
+  save_freq: 10  # Save every N episodes
+  
+  # Device
+  device: "cuda"  # Options: cuda, cpu, auto
+
+# PPO Agent Configuration
+ppo:
+  # Network architecture
+  policy_network: [256, 128]
+  value_network: [256, 128]
+  activation: "relu"
+  
+  # Training hyperparameters
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 64
+  n_epochs: 10
+  gamma: 0.99
+  gae_lambda: 0.95
+  
+  # PPO specific
+  clip_range: 0.2
+  clip_range_vf: null  # Optional
+  ent_coef: 0.01  # Entropy coefficient
+  vf_coef: 0.5  # Value function coefficient
+  max_grad_norm: 0.5
+  
+  # Training
+  total_timesteps: 100000
+  log_interval: 10
+  save_freq: 10000
+  
+  # Device
+  device: "auto"
+
+# Reward Function
+reward:
+  function: "combined"  # Options: simple, penalty, sharpe, combined
+  
+  weights:
+    profit: 1.0
+    cost: 2.0
+    risk: 0.3
+    drawdown: 0.5
+    momentum: 0.2
+  
+  risk_free_rate: 0.0
+
+# Evaluation
+evaluation:
+  n_episodes: 10
+  deterministic: true
+  render: false
+  
+  metrics:
+    - total_return
+    - sharpe_ratio
+    - max_drawdown
+    - win_rate
+    - avg_trade_duration
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  log_dir: "./logs"
+  tensorboard: true
+  save_plots: true
+  plot_dir: "./results"
+
+# Model Checkpoints
+checkpoints:
+  save_dir: "./models"
+  save_best_only: true
+  monitor: "mean_reward"
+  mode: "max"
+
+# Visualization
+visualization:
+  plot_training: true
+  plot_evaluation: true
+  plot_trades: true
+  plot_indicators: true
+  figure_size: [15, 10]
+  dpi: 150
+
+# Random Seeds (for reproducibility)
+seeds:
+  numpy: 42
+  torch: 42
+  random: 42
+
+# Google Colab Settings
+colab:
+  mount_drive: true
+  project_path: "/content/drive/MyDrive/deeptrade-rl"
+  use_gpu: true
+  install_packages: true
+
+# Production Deployment (Future)
+deployment:
+  mode: "paper"  # Options: paper, live
+  risk_management:
+    max_position_size: 0.1  # 10% of portfolio
+    stop_loss: 0.05  # 5%
+    take_profit: 0.15  # 15%
+  monitoring:
+    alert_email: "your.email@example.com"
+    alert_threshold: -0.1  # -10% drawdown alert
+
+# Notes
+notes: |
+  This configuration file contains all hyperparameters for the DeepTrade-RL project.
+  
+  For SE4050 submission:
+  - Use default values for consistent results
+  - Document any changes in the report
+  - Include this file in the project submission
+  
+  For production deployment:
+  - Update API keys with real credentials
+  - Adjust risk management parameters
+  - Enable monitoring and alerts
+  
+  IMPORTANT: Never commit real API keys to version control!
+  Use environment variables or secure key management systems.
