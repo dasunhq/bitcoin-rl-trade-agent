@@ -1,0 +1,11 @@
+torch
+gymnasium
+numpy
+pandas
+matplotlib
+stable-baselines3
+ccxt
+python-binance
+ta
+pyyaml
+plotly
